@@ -1,6 +1,8 @@
 # SwiftUI-cs193p-Spring2020
 Here I will upload solutions for assignments of cs193p 2020
 
+[Assignment 1](https://github.com/camotsuc/SwiftUI-cs193p-Spring2020#assignment-1)
+
 # Assignment 1
 
 # 2
