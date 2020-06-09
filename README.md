@@ -55,7 +55,7 @@ struct ContentView: View {
                 .aspectRatio(2/3, contentMode: .fit)
             }
         }
-        .font(viewModel.cards.count ==  5 ? .largeTitle : .title) // Ternary operator here.
+        .font(viewModel.cards.count ==  5 ? .largeTitle : .body) // Ternary operator here.
         .padding()
         .foregroundColor(Color.orange)
         
