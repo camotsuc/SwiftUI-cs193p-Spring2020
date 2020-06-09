@@ -6,13 +6,19 @@ Here I will upload solutions for assignments of cs193p 2020
 # Assignment 1
 
 # 2
-We have our ViewModel in the file called **EmojiMemoryGame**, and in the computing var **cards** we returning all of our cards, so I think we need to shuffle the cards there.
+We can shuffle cards in our init of our Model **MemoryGame**.
 ```swift
-var cards: Array<MemoryGame<String>.Card> {
-        return model.cards.shuffled() // Adding .shuffled() there
+    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+        cards = Array<Card>()
+        for pairIndex in 0..<numberOfPairsOfCards {
+            let content: CardContent = cardContentFactory(pairIndex)
+            cards.append(Card(content: content, id: pairIndex*2))
+            cards.append(Card(content: content, id: pairIndex*2+1))
+        }
+        cards.shuffle() //Here we can shuffle the cards
     }
 ```
-In swift we have a built-in method called **shuffled()**, and he is shuffling elements.
+In swift we have a built-in method called **shuffle()**, and he is shuffling elements.
 
 # 3
 Changing ratio surely is a UI thing, so we need to change something in our View.
