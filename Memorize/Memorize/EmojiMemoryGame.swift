@@ -15,7 +15,7 @@ class EmojiMemoryGame {
     
     //MARK: -Access to the Model
     var cards: Array<MemoryGame<String>.Card> {
-        return model.cards.shuffled()
+        return model.cards
     }
     
     
